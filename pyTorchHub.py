@@ -24,7 +24,7 @@ preprocess = transforms.Compose([
     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
 ])
 input_tensor = preprocess(input_image)
-input_batch = input_tensor.unsqueeze(0
+input_batch = input_tensor.unsqueeze(0)
                                      
 if torch.cuda.is_available():
     input_batch = input_batch.to('cuda')
